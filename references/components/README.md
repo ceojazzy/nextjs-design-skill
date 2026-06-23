@@ -27,7 +27,7 @@ export function cn(...c: Array<string | false | null | undefined>) {
 | **[primitives.md](primitives.md)** | Buttons (variants/sizes/loading) · Badges & pills · Cards (base, feature, image) |
 | **[heroes.md](heroes.md)** | Hero sections — split (text + media) and centered |
 | **[headers.md](headers.md)** | Static sticky header (see [../animated-components.md](../animated-components.md) for animated/glowing/neon headers) |
-| **[navbars.md](navbars.md)** | Desktop nav (animated underline) · Dropdown & mega-menu · Mobile drawer · Sidebar · Bottom tab bar · Breadcrumbs |
+| **[navbars.md](navbars.md)** | Desktop nav (animated underline) · Dropdown & mega-menu · Mobile drawer · Sidebar (incl. collapsible with collapse button) · Bottom tab bar · Breadcrumbs |
 | **[footers.md](footers.md)** | Minimal footer · Mega footer (columns + newsletter) |
 | **[sections.md](sections.md)** | Feature grid · Pricing · Testimonials · Stats · FAQ accordion · CTA band · Logo cloud |
 | **[forms.md](forms.md)** | Field + inputs · Contact form (validation + states) |
