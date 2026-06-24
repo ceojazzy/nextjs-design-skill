@@ -85,6 +85,9 @@ git clone https://github.com/ceojazzy/nextjs-design-skill.git <skills-dir>/nextj
 After cloning, read SKILL.md first, it tells you which reference file to open for the task at hand.
 ```
 
+> [!WARNING]
+> A restart of your CLI or IDE is required after installation. The new skill will not be detected until the next session begins.
+
 ---
 
 ## Example Prompts
