@@ -306,7 +306,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 ```
 
 > Add **structured data** (`Service` JSON-LD) and an FAQ schema in the detail page for richer
-> search results — see [../nextjs.md §15](../nextjs.md). For a `FAQPage` schema, serialize
+> search results — see [../nextjs.md §7](../nextjs.md). For a `FAQPage` schema, serialize
 > `service.faqs` into JSON-LD.
 
 ### 4. Sitemap & nav

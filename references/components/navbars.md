@@ -308,6 +308,84 @@ export function Sidebar() {
 }
 ```
 
+### Collapsible sidebar with collapse button
+
+A sidebar that can collapse to icon-only mode. The collapse button is positioned on the right edge, centered on the border line between the logo section and the nav menu.
+
+**Button specs:**
+- Size: `size-10` (40px) with `size-5` icons
+- Position: `absolute -right-4 top-16 -translate-y-1/2` (centered on the border between h-16 logo and nav)
+- Shadow: `shadow-lg`
+- Border: `border-line`
+- Background: `bg-surface` with `hover:bg-surface-2`
+
+```tsx
+// components/collapsible-sidebar.tsx
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { cn } from "@/lib/cn";
+import { PanelLeftClose, PanelLeft } from "lucide-react";
+
+interface NavSection {
+  title: string;
+  items: { label: string; href: string; icon: React.ReactNode }[];
+  defaultOpen?: boolean;
+}
+
+export function CollapsibleSidebar({ sections }: { sections: NavSection[] }) {
+  const pathname = usePathname();
+  const [collapsed, setCollapsed] = useState(false);
+
+  return (
+    <aside
+      className={cn(
+        "hidden lg:fixed lg:inset-y-0 lg:left-0 lg:z-30 lg:flex lg:flex-col border-r border-line bg-surface transition-all duration-300",
+        collapsed ? "lg:w-[68px]" : "lg:w-64"
+      )}
+    >
+      {/* Logo - h-16 */}
+      <div className={cn(
+        "flex h-16 items-center border-b border-line px-4",
+        collapsed ? "justify-center" : "gap-3"
+      )}>
+        <div className="grid size-9 shrink-0 place-items-center rounded-xl bg-accent text-on-accent">
+          {/* Logo icon */}
+        </div>
+        {!collapsed && (
+          <span className="font-display text-lg font-bold text-ink">Acme</span>
+        )}
+      </div>
+
+      {/* Nav */}
+      <nav className="flex-1 overflow-y-auto px-3 py-4">
+        {/* Nav items here */}
+      </nav>
+
+      {/* Collapse toggle - centered on border between logo and nav */}
+      <button
+        onClick={() => setCollapsed(!collapsed)}
+        aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+        className="absolute -right-4 top-16 z-30 grid size-10 -translate-y-1/2 place-items-center rounded-full border border-line bg-surface text-ink-3 shadow-lg transition-colors hover:bg-surface-2 hover:text-ink"
+      >
+        {collapsed ? <PanelLeft className="size-5" /> : <PanelLeftClose className="size-5" />}
+      </button>
+    </aside>
+  );
+}
+```
+
+**Layout integration:** Use a context to share collapsed state with the main content area:
+
+```tsx
+// Use SidebarContext to dynamically set padding
+const { collapsed } = useSidebar();
+<div className={cn("transition-all duration-300", collapsed ? "lg:pl-[68px]" : "lg:pl-64")}>
+  {/* Main content */}
+</div>
+```
+
 ### Bottom tab bar (mobile app-style)
 
 ```tsx

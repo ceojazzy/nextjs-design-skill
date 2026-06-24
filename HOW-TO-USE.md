@@ -43,38 +43,38 @@ OpenCode discovers skills in a `skills/` directory inside its config folder. Pic
 
 ### Option A — Global (available in every project)
 
-Copy this folder so the skill lives at `~/.config/opencode/skills/nextjs-modern-design/`:
+Copy this folder so the skill lives at `~/.config/opencode/skills/nextjs-design-skill/`:
 
 **macOS / Linux**
 
 ```bash
-mkdir -p ~/.config/opencode/skills/nextjs-modern-design
-cp -r ./nextjs-design-skill/. ~/.config/opencode/skills/nextjs-modern-design/
+mkdir -p ~/.config/opencode/skills/nextjs-design-skill
+cp -r ./nextjs-design-skill/. ~/.config/opencode/skills/nextjs-design-skill/
 ```
 
 **Windows (PowerShell)**
 
 ```powershell
-$dest = "$HOME\.config\opencode\skills\nextjs-modern-design"
+$dest = "$HOME\.config\opencode\skills\nextjs-design-skill"
 New-Item -ItemType Directory -Force -Path $dest | Out-Null
 Copy-Item -Recurse -Force ".\nextjs-design-skill\*" $dest
 ```
 
 ### Option B — Per-project (only this repo)
 
-Copy it to `.opencode/skills/nextjs-modern-design/` in your project root:
+Copy it to `.opencode/skills/nextjs-design-skill/` in your project root:
 
 **macOS / Linux**
 
 ```bash
-mkdir -p .opencode/skills/nextjs-modern-design
-cp -r ./nextjs-design-skill/. .opencode/skills/nextjs-modern-design/
+mkdir -p .opencode/skills/nextjs-design-skill
+cp -r ./nextjs-design-skill/. .opencode/skills/nextjs-design-skill/
 ```
 
 **Windows (PowerShell)**
 
 ```powershell
-$dest = ".\.opencode\skills\nextjs-modern-design"
+$dest = ".\.opencode\skills\nextjs-design-skill"
 New-Item -ItemType Directory -Force -Path $dest | Out-Null
 Copy-Item -Recurse -Force ".\nextjs-design-skill\*" $dest
 ```
@@ -91,7 +91,7 @@ opencode
 /skills
 ```
 
-You should see **nextjs-modern-design** in the list. (If your OpenCode build doesn't expose
+You should see **nextjs-design-skill** in the list. (If your OpenCode build doesn't expose
 `/skills`, just confirm the files exist at the path above — the agent still reads them.)
 
 ---
@@ -116,18 +116,18 @@ Review this page for accessibility and dark-mode contrast.
 If you want to force it, name it:
 
 ```
-Use the nextjs-modern-design skill to build a pricing page with three tiers.
+Use the nextjs-design skill to build a pricing page with three tiers.
 ```
 
 ---
 
 ## 4. What the agent does with it
 
-1. **Classifies** the site type and reads the matching playbook in `nextjs.md §6`.
+1. **Classifies** the site type and reads the matching playbook in `references/categories.md`.
 2. **Chooses** a style + palette + font pairing from `references/design-systems.md`.
 3. **Lays the foundation** — tokens, light/dark theming, type & spacing scales (`nextjs.md §2–§4`).
-4. **Composes** the UI from `references/components/` and adds effects from
-   `references/animated-components.md`.
+4. **Composes** the UI from `references/components/` using the pattern catalog in `references/patterns.md`,
+   and adds effects from `references/animated-components.md`.
 5. **Layers motion** (ambient → scroll → interaction) per `nextjs.md §5`.
 6. **Verifies** against `references/ux-rules.md` (a11y, performance, responsive, reduced-motion).
 7. **For a collection** (services / products / blog…), scaffolds a hub **and a designed page per
