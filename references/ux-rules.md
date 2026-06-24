@@ -50,6 +50,7 @@ on every build; run the full list before shipping. Each line is a pass/fail chec
 - [ ] Elevation/shadow scale is consistent; effects match the chosen style.
 - [ ] Light + dark designed **together**; dark = soft slate, desaturated accents — not inverted, not pure black.
 - [ ] One **primary CTA** per view; secondary actions visually subordinate.
+- [ ] No CSS selector conflicts — type-based selectors (`.section`) don't cancel element selectors (`.cta`); paddings/margins between sections verified.
 
 ## 5. Layout & responsive — HIGH
 

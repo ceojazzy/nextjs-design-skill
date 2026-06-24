@@ -6,6 +6,9 @@ Motion**, split into focused files. They use the **semantic tokens** from
 `text-accent`, `font-display`…), so they **theme-switch automatically**. For animated / glow /
 neon variants see [../animated-components.md](../animated-components.md).
 
+**Looking for a specific feature?** Check the [pattern catalog](../patterns.md) — it maps any
+request ("add navbar", "add FAQ", "add spotlight card") directly to the right file.
+
 ## Conventions
 
 - Server Components by default; add `"use client"` only when a component uses state/effects/events.

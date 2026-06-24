@@ -8,6 +8,9 @@ buttons, animated text, scroll reveals, marquees, counters, and page transitions
 semantic tokens from [../nextjs.md §2](../nextjs.md). **Every effect must degrade** under
 `prefers-reduced-motion` — the reduced-motion block at the end handles most of it globally.
 
+**Looking for which component to use?** See the [pattern catalog](patterns.md) — it maps any
+feature request directly to the right file and component.
+
 **Contents**
 
 - [Add this CSS once](#add-this-css-once) (keyframes + neon/glow/aurora/marquee utilities)
@@ -1513,7 +1516,7 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
 }
 ```
 
-For the **native** View Transitions API approach, see [../nextjs.md §16](../nextjs.md).
+For the **native** View Transitions API approach, see [../nextjs.md §8](../nextjs.md).
 
 ---
 
