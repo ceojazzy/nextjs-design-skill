@@ -223,6 +223,7 @@ Read the file that matches the task. Each is standalone and readable.
 - **Always provide a `prefers-reduced-motion` fallback** (static, readable end-state).
 - **AA contrast in BOTH themes** (4.5:1 body, 3:1 large/UI). Test dark mode independently.
 - **Dark mode = soft slate, not pure black** (`#0b0b0f`–`#161922` range), desaturated tonal variants.
+- **Always ship both light and dark themes by default**, unless the user explicitly asks for one.
 - **No emoji as structural icons** — use SVG (Lucide) or hand-rolled `<svg>`.
 - **Semantic tokens, not raw hex** in components (`bg-surface`, `text-ink`, `text-accent`).
 - **One primary CTA per view**; secondary actions are visually subordinate.
