@@ -65,19 +65,24 @@ export default nextConfig;
 ### 1.3 Recommended structure
 
 ```
+components/               # ⚠️ Put components at PROJECT ROOT, not inside app/
+  providers/              # smooth-scroll, theme, query
+  chrome/                 # site-header, site-footer, scroll-progress, cursor, background, fab
+  motion/                 # reveal, stagger, parallax, marquee, magnetic, spotlight, text-reveal, counter
+  ui/                     # button, card, input, select, dialog, tabs, badge, toast
+  sections/               # hero, features, pricing, faq, cta, stats
 app/
-  layout.tsx            # fonts, theme script, providers, global chrome (header/footer/bg/cursor)
-  globals.css           # tokens + theming + keyframes + base layer
-  page.tsx              # routes…
-  (marketing)/…         # optional route groups
-  components/
-    providers/          # smooth-scroll, theme, query
-    chrome/             # site-header, site-footer, scroll-progress, cursor, background, fab
-    motion/             # reveal, stagger, parallax, marquee, magnetic, spotlight, text-reveal, counter
-    ui/                 # button, card, input, select, dialog, tabs, badge, toast
-    sections/           # hero, features, pricing, faq, cta, stats
-  lib/                  # utils, config constants (contact handles!), data
+  layout.tsx              # fonts, theme script, providers, global chrome (header/footer/bg/cursor)
+  globals.css             # tokens + theming + keyframes + base layer
+  page.tsx                # routes…
+  (marketing)/…           # optional route groups
+lib/                      # utils, config constants (contact handles!), data
 ```
+
+> **Components go at root, not inside `app/`.** Keep `components/` at the project root level.
+> Use the `@/` import alias (configured in `tsconfig.json`) so imports are always
+> `@/components/...` regardless of how deep the consuming file is. This avoids fragile
+> relative paths like `../../components/...` that break when files move.
 
 > Keep **one config constant** for contact handles/numbers (FAB, email, phone) so they're
 > trivial to change and easy to mark as placeholders.
@@ -89,12 +94,12 @@ app/
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { SmoothScroll } from "./components/providers/smooth-scroll";
-import { SiteBackground } from "./components/chrome/site-background";
-import { Cursor } from "./components/chrome/cursor";
-import { ScrollProgress } from "./components/chrome/scroll-progress";
-import { SiteHeader } from "./components/chrome/site-header";
-import { SiteFooter } from "./components/chrome/site-footer";
+import { SmoothScroll } from "@/components/providers/smooth-scroll";
+import { SiteBackground } from "@/components/chrome/site-background";
+import { Cursor } from "@/components/chrome/cursor";
+import { ScrollProgress } from "@/components/chrome/scroll-progress";
+import { SiteHeader } from "@/components/chrome/site-header";
+import { SiteFooter } from "@/components/chrome/site-footer";
 
 const display = Space_Grotesk({
   subsets: ["latin"],
