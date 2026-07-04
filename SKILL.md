@@ -13,13 +13,11 @@ description: >-
   fields, magnetic buttons, shimmer/gradient text, and scroll-linked reveals. Includes 30+ UI
   styles (minimalism, glassmorphism, neumorphism, claymorphism, brutalism, bento, aurora,
   retro-futuristic/neon, dark OLED, soft-slate dark). Stack: Next.js App Router + React 19 +
-  Tailwind CSS v4 + Motion + Lenis. Also covers full-stack wiring: multi-page generation
-  (services, products, projects, team, blog — a hub plus a fully designed page per item), server
-  actions, route handlers (API), form handling, validation, email, data fetching/caching,
-  database, and auth. Trigger words: landing page, portfolio, dashboard, SaaS, agency, marketing
-  site, hero, navbar, header, footer, card, button, modal, animation, dark mode, glassmorphism,
-  neon, glow, responsive, accessible, services page, product page, blog, contact form, API route,
-  server action, database, authentication.
+  Tailwind CSS v4 + Motion + Lenis. Also covers multi-page generation (services, products,
+  projects, team, blog — a hub plus a fully designed page per item). Trigger words: landing page,
+  portfolio, dashboard, SaaS, agency, marketing site, hero, navbar, header, footer, card, button,
+  modal, animation, dark mode, glassmorphism, neon, glow, responsive, accessible, services page,
+  product page, blog.
 license: MIT
 ---
 
@@ -133,12 +131,11 @@ Use it when the task changes **how a website looks, feels, moves, or is interact
 - Choosing a visual style, color palette, type system, spacing, or motion language.
 - Adding animation, dark mode, glow/neon effects, scroll interactions, or page transitions.
 - Scaffolding a content **collection** (services, products, projects, team, blog…) that needs a hub + a page per item.
-- Wiring forms, search, APIs, server actions, email, data, or auth that a Next.js UI depends on.
 - Reviewing UI for accessibility, responsiveness, performance, or visual polish.
 
 ### Skip
 
-- DevOps/infra, or backend logic with **no** connection to a Next.js UI (this skill covers the backend that powers the UI — forms, APIs, data, auth — not unrelated services).
+- DevOps/infra or any backend logic unrelated to the UI.
 
 **Decision rule:** if the user says _"build / design / make / style / animate / improve / fix the look of"_ anything web-facing → use this skill.
 
@@ -168,7 +165,6 @@ Use it when the task changes **how a website looks, feels, moves, or is interact
 
 **For a content collection** (services / products / projects / team / blog…), don't dump it on one
 page — scaffold a hub **and a designed page per item** → [references/page-patterns.md](references/page-patterns.md).
-**To make forms, search, APIs, data, or auth actually work**, use [references/backend.md](references/backend.md).
 
 **Infer intent, don't interrogate.** Read the brief, choose the most useful interpretation, and
 build. Only ask when truly blocked.
@@ -191,8 +187,6 @@ build. Only ask when truly blocked.
 | "dashboard / admin / analytics"                      | dense data UI                                     | [categories.md › Dashboard](references/categories.md#dashboard-admin-analytics), restrained motion        |
 | "add WhatsApp / chat / call button"                  | persistent contact                                | [components/ui-elements.md](references/components/ui-elements.md)                                         |
 | "add services / products / projects / team / blog"   | a collection → hub + a page per item              | [page-patterns.md](references/page-patterns.md)                                                           |
-| "make the form work / send email / save / sign in"   | server action + validation + email/db/auth        | [backend.md](references/backend.md)                                                                       |
-| "API route / endpoint / webhook / server action"     | backend handler                                   | [backend.md](references/backend.md)                                                                       |
 | "it hangs when scrolling"                            | heavy sticky-pin section                          | remove tall `position:sticky` pins (ux-rules.md anti-patterns)                                           |
 | "what component should I use for X"                  | find the right pattern                            | [patterns.md](references/patterns.md) — search by feature name                                           |
 
@@ -211,7 +205,6 @@ Read the file that matches the task. Each is standalone and readable.
 | **[references/components/](references/components/README.md)**              | Core **component library** (split into files): [primitives](references/components/primitives.md), [heroes](references/components/heroes.md), [headers](references/components/headers.md), [navbars](references/components/navbars.md) (incl. collapsible sidebar), [footers](references/components/footers.md), [sections](references/components/sections.md), [forms](references/components/forms.md), [overlays](references/components/overlays.md), [ui-elements](references/components/ui-elements.md). |
 | **[references/animated-components.md](references/animated-components.md)** | **Animated & effect** components: animated/glowing/neon **headers**, neon **borders & cards**, gradient-border cards, BorderGlow cards (cursor-tracking glow), spotlight/tilt cards, aurora & particle backgrounds, marquees, magnetic buttons, shimmer/gradient text, scroll reveals, counters, page transitions. |
 | **[references/page-patterns.md](references/page-patterns.md)**             | **Multi-page generation**: when asked to add a collection (services, products, projects, team, blog…), scaffold a hub **and a designed page per item** — typed data source, dynamic routes, `generateStaticParams`, `generateMetadata`, `notFound`, sitemap + nav wiring. |
-| **[references/backend.md](references/backend.md)**                         | **Backend that powers the UI**: server actions, route handlers (API), Zod validation, email, newsletter, data fetching/caching, database, auth + middleware, rate limiting, webhooks, dynamic OG images, env/secrets, security checklist.                                  |
 | **[references/ux-rules.md](references/ux-rules.md)**                       | Condensed **rules checklist**: accessibility, interaction, performance, layout, typography/color, animation, forms, navigation, anti-patterns, pre-delivery pass. Read before shipping.                                                                                    |
 | **[HOW-TO-USE.md](HOW-TO-USE.md)**                                         | How to install this skill into OpenCode and how to invoke it.                                                                                                                                                                                                             |
 

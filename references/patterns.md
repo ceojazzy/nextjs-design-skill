@@ -68,7 +68,6 @@ points to the component file that contains the full implementation.
 | "form / input / field" | Labeled field with hint/error states | [components/forms.md](components/forms.md) |
 | "contact form" | Client form with validation + states | [components/forms.md › Contact form](components/forms.md#contact-form-client-with-validation--states) |
 | "searchable select / combobox" | Filter options live as you type | [components/forms.md › Searchable select](components/forms.md#searchable-select-combobox) |
-| "make the form work / send email" | Server action + Zod validation + email | [backend.md](backend.md) |
 
 ## Overlays & Feedback
 

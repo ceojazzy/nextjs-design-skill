@@ -363,8 +363,7 @@ Two storage options:
   `@next/mdx` / `next-mdx-remote`). Derive `slug` from the filename.
 
 Blog detail must add: author block, published date (`<time dateTime>`), reading time, tags,
-prev/next links, and `article` + `BlogPosting` JSON-LD with an OG image (use a dynamic OG route —
-see [backend.md](backend.md)).
+prev/next links, and `article` + `BlogPosting` JSON-LD with an OG image.
 
 ```ts
 // app/blog/posts.ts (data option)
@@ -394,4 +393,3 @@ For **every** generated detail page:
 - [ ] Scroll reveals (reduced-motion safe) — not a flat wall of text.
 - [ ] Added to `sitemap.ts`, header nav, and footer.
 - [ ] Optional JSON-LD (`Service` / `Product` / `BlogPosting` / `FAQPage`) for rich results.
-- [ ] Forms on the page wired to a server action / route handler — see [backend.md](backend.md).

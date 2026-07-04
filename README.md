@@ -45,7 +45,6 @@ references/
 ├── patterns.md       ← quick-lookup routing table
 ├── categories.md     ← site type playbooks
 ├── page-patterns.md  ← hub + page per item (services, blog…)
-├── backend.md        ← server actions, APIs, validation, auth
 └── ux-rules.md       ← a11y, performance, reduced-motion
 ```
 
@@ -61,7 +60,6 @@ references/
 - 50+ components (heroes, navs, cards, buttons, modals, forms…)
 - Animated / glowing / neon component variants
 - Multi-page generation (services, products, blog)
-- Server actions, route handlers, validation, email, auth
 
 ---
 
@@ -98,7 +96,7 @@ After cloning, read SKILL.md first, it tells you which reference file to open fo
 | Neon style | Restyle in retro-futuristic neon, glowing cards, aurora background |
 | Navigation | Mega-menu navbar + mobile drawer, both animated |
 | Components | Bento grid with spotlight hover and staggered scroll reveals |
-| Working form | Contact form with validation and email via server action |
+| Services pages | Services hub + a fully designed page per service |
 
 ---
 

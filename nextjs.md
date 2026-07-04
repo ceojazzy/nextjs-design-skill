@@ -11,7 +11,6 @@
 > - [references/components/](references/components/README.md) — component library
 > - [references/animated-components.md](references/animated-components.md) — animated/effect components
 > - [references/ux-rules.md](references/ux-rules.md) — accessibility, performance, checklists
-> - [references/backend.md](references/backend.md) — server actions, APIs, validation, email, auth
 > - [references/page-patterns.md](references/page-patterns.md) — multi-page generation
 >
 > **Doctrine:** _calm layout, loud motion._ Restraint in color and structure; richness in

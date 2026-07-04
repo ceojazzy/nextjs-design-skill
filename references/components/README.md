@@ -50,5 +50,4 @@ export function cn(...c: Array<string | false | null | undefined>) {
 
 > **Building full pages or a content collection?** When the brief implies many similar pages
 > (services, products, projects, team, blog…), scaffold a **hub + a designed page per item** —
-> see [../page-patterns.md](../page-patterns.md). To make forms, search, and data actually work
-> (server actions, API routes, validation, email, database, auth), see [../backend.md](../backend.md).
+> see [../page-patterns.md](../page-patterns.md).

@@ -27,7 +27,6 @@ nextjs-design-skill/
     │   └── ui-elements.md            ←   tabs, alerts, skeleton, pagination, table…
     ├── animated-components.md        ← animated / glowing / neon components
     ├── page-patterns.md              ← collections → hub + a designed page per item
-    ├── backend.md                    ← server actions, APIs, validation, email, data, auth
     └── ux-rules.md                   ← accessibility / performance / motion checklist
 ```
 
@@ -132,8 +131,6 @@ Use the nextjs-design skill to build a pricing page with three tiers.
 6. **Verifies** against `references/ux-rules.md` (a11y, performance, responsive, reduced-motion).
 7. **For a collection** (services / products / blog…), scaffolds a hub **and a designed page per
    item** from `references/page-patterns.md`.
-8. **For working forms / APIs / data / auth**, implements server actions or route handlers from
-   `references/backend.md`.
 
 ---
 
@@ -148,7 +145,6 @@ Use the nextjs-design skill to build a pricing page with three tiers.
 | Footer          | "Create a four-column mega-footer with newsletter signup, social links, and a big gradient CTA band above it."                              |
 | Components      | "Give me a bento grid of feature cards with spotlight-on-hover and staggered scroll reveals."                                               |
 | Services pages  | "Add our services — a services hub plus a separate, fully-designed page for each service."                                                  |
-| Working form    | "Make the contact form actually send an email, with validation and a success state (server action)."                                       |
 | Review          | "Audit this page against the skill's UX rules and fix any contrast or reduced-motion issues."                                               |
 
 ---
