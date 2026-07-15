@@ -9,6 +9,31 @@ A self-contained **Markdown design skill** for building modern Next.js websites.
 
 ---
 
+## Usage
+
+Paste this prompt to your AI agent to install and use the skill:
+
+```
+Clone https://github.com/ceojazzy/nextjs-design-skill into the skills directory for this agent.
+Then read SKILL.md from that folder and use it to guide all Next.js design work in this project.
+
+Placement:
+- OpenCode → .opencode/skills/nextjs-design-skill
+- MiMoCode → .mimocode/skills/nextjs-design-skill
+- Claude → .claude/skills/nextjs-design-skill
+- Other agents → place in whatever skills/ folder the tool reads from
+
+Git clone command:
+git clone https://github.com/ceojazzy/nextjs-design-skill.git <skills-dir>/nextjs-design-skill
+
+After cloning, read SKILL.md first, it tells you which reference file to open for the task at hand.
+```
+
+> [!WARNING]
+> A restart of your CLI or IDE is required after installation. The new skill will not be detected until the next session begins.
+
+---
+
 # 🚀 Why This Exists
 
 ## **Give any AI the "Designer's Touch."**
@@ -60,31 +85,6 @@ references/
 - 50+ components (heroes, navs, cards, buttons, modals, forms…)
 - Animated / glowing / neon component variants
 - Multi-page generation (services, products, blog)
-
----
-
-## Usage
-
-Paste this prompt to your AI agent to install and use the skill:
-
-```
-Clone https://github.com/ceojazzy/nextjs-design-skill into the skills directory for this agent.
-Then read SKILL.md from that folder and use it to guide all Next.js design work in this project.
-
-Placement:
-- OpenCode → .opencode/skills/nextjs-design-skill
-- MiMoCode → .mimocode/skills/nextjs-design-skill
-- Claude → .claude/skills/nextjs-design-skill
-- Other agents → place in whatever skills/ folder the tool reads from
-
-Git clone command:
-git clone https://github.com/ceojazzy/nextjs-design-skill.git <skills-dir>/nextjs-design-skill
-
-After cloning, read SKILL.md first, it tells you which reference file to open for the task at hand.
-```
-
-> [!WARNING]
-> A restart of your CLI or IDE is required after installation. The new skill will not be detected until the next session begins.
 
 ---
 
