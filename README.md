@@ -1,6 +1,3 @@
-> [!WARNING]
-> The first time the agent loads this skill, it reads all reference files which consumes a lot of tokens. Run the installation prompt with a cheaper or low-reasoning model to save credits.
-
 # Next.js Design Skill
 
 A self-contained **Markdown design skill** for building modern Next.js websites. No scripts, no CLI, just read the files.
